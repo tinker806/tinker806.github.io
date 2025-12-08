@@ -3,99 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your Personal GitHub Page">
-    <title>Your Name - GitHub Page</title>
+    <meta name="description" content="Personal page of Ruofei TANG, Ph.D. candidate in Computer Science at HKBU.">
+    <title>Ruofei TANG - Personal Homepage</title>
     <style>
+        :root {
+            --primary-color: #2a7ae2; /* A modern academic blue */
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+            --section-bg: #ffffff;
+            --header-color: #ffffff;
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-        }
-        main {
-            padding: 2rem;
-            max-width: 800px;
+        .container {
+            max-width: 900px;
             margin: 0 auto;
+            padding: 2rem;
+            display: flex;
+            gap: 2rem;
         }
-        section {
-            margin-bottom: 2rem;
+        .sidebar {
+            flex: 0 0 220px;
         }
-        h2 {
-            color: #4CAF50;
+        .main-content {
+            flex: 1;
+        }
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--section-bg);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
         }
         h1 {
-            color: white;
+            font-size: 2.5rem;
+            margin: 0;
+            color: var(--text-color);
         }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #333;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+        .affiliation {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        .links a {
+            margin-right: 12px;
+            font-weight: bold;
+        }
+        section {
+            background-color: var(--section-bg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
         }
         a {
-            color: #4CAF50;
+            color: var(--primary-color);
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 1rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Ruofei TANG</h1>
-        <p>3-year PhD@Hong Kong Baptist University</p>
-    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <!-- Add a professional photo of yourself -->
+            <img src="path/to/your-photo.jpg" alt="Ruofei TANG" class="profile-pic">
+            <h1>Ruofei TANG</h1>
+            <p class="affiliation">Ph.D. Candidate<br>Hong Kong Baptist University</p>
+            <div class="links">
+                <a href="path/to/your-cv.pdf">[CV]</a>
+                <a href="mailto:csrftang@comp.hkbu.edu.hk">[Email]</a><br>
+                <a href="https://scholar.google.com/citations?user=your_id">[Google Scholar]</a><br>
+                <a href="https://github.com/tinker806">[GitHub]</a>
+                <a href="https://www.linkedin.com/in/your_profile/">[LinkedIn]</a>
+            </div>
+        </aside>
 
-    <main>
-        <section>
-            <h2>Research Interests</h2>
-            <p>Logic Synthesis</p>
-        </section>
+        <main class="main-content">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    I am a Ph.D. candidate in the Department of Computer Science at Hong Kong Baptist University (HKBU), advised by Prof. Jianliang XU. My research focuses on revolutionizing Electronic Design Automation (EDA) by integrating database and graph mining techniques into logic synthesis... (continue your bio here)
+                </p>
+            </section>
 
-        <section>
-            <h2>Publications</h2>
-            <ul>
-                <li>
-                    <strong>A Database Dependent Framework for K-Input Maximum Fanout-Free Window Rewriting</strong><br>
-                    Authors: Xuliang ZHU*, Ruofei TANG*, Co-Author 2<br>
-                    Journal/Conference: <em>Design Automation Conference</em>, 2023<br>
-                    <a href="https://example.com/paper1">Link to Paper</a>
-                </li>
-                <li>
-                    <strong>Maximum Fanout-Free Window Enumeration: Towards Multi-Output Sub-structure Synthesis</strong><br>
-                    Authors: Ruofei TANG*, Xuliang ZHU*<br>
-                    Journal/Conference: <em>Design, Automation and Test in Europe Conference</em>, 2025<br>
-                    <a href="https://example.com/paper2">Link to Paper</a>
-                </li>
-                <li>
-                    <strong>EDGE: DBMS-Empowered Boolean Decomposition for GIG Synthesis</strong><br>
-                    Authors: Ruofei TANG, Co-Author 1<br>
-                    Journal/Conference: <em>Design Automation Conference</em>, 2025<br>
-                    <a href="https://example.com/paper2">Link to Paper</a>
-                </li>
-            </ul>
-        </section>
+            <section id="news">
+                <h2>News</h2>
+                <ul>
+                    <li><b>[Mar. 2024]</b> Our paper "EDGE..." has been accepted by <b>DAC '25</b>!</li>
+                    <li><b>[Jun. 2023]</b> Honored to receive the <b>Best Student Paper Award</b> at <b>IWLS '23</b>.</li>
+                    <!-- Add more news items -->
+                </ul>
+            </section>
 
-        <section>
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:your.email@example.com">csrftang@comp.hkbu.edu.hk</a></p>
-        </section>
-    </main>
+            <section id="publications">
+                <h2>Publications</h2>
+                <p>(* indicates equal contribution)</p>
+                <ul>
+                    <li>
+                        <strong>EDGE: DBMS-Empowered Boolean Decomposition for GIG Synthesis</strong><br>
+                        <strong>Ruofei TANG</strong>, Co-Author 1<br>
+                        <em>62nd ACM/IEEE Design Automation Conference (<strong>DAC '25</strong>)</em>, 2025. (Accepted)<br>
+                        [<a href="#">Paper</a>] [<a href="#">BibTeX</a>]
+                    </li>
+                    <li>
+                        <strong>Maximum Fanout-Free Window Enumeration...</strong><br>
+                        <strong>Ruofei TANG*</strong>, Xuliang ZHU*<br>
+                        <em>Design, Automation and Test in Europe Conference (<strong>DATE '25</strong>)</em>, 2025. (Accepted)<br>
+                        [<a href="#">Paper</a>] [<a href="#">Code</a>] [<a href="#">BibTeX</a>]
+                    </li>
+                    <li>
+                        <strong>A Database Dependent Framework for K-Input MFFW Rewriting</strong><br>
+                        Xuliang ZHU*, <strong>Ruofei TANG*</strong>, Co-Author 2<br>
+                        <em>60th ACM/IEEE Design Automation Conference (<strong>DAC '23</strong>)</em>, 2023.<br>
+                        [<a href="path/to/paper.pdf">Paper</a>] [<a href="path/to/slides.pdf">Slides</a>] [<a href="#">Video</a>] [<a href="#">BibTeX</a>]
+                    </li>
+                </ul>
+            </section>
+            
+            <section id="awards">
+                <h2>Awards & Honors</h2>
+                <ul>
+                    <li>Best Student Paper Award, 32nd International Workshop on Logic & Synthesis (IWLS), 2023</li>
+                    <li>RPg Research Performance Award, Hong Kong Baptist University, 2025</li>
+                    <!-- Add more -->
+                </ul>
+            </section>
+
+        </main>
+    </div>
 
     <footer>
-        <p>&copy; 2025 Ruofei TANG. All rights reserved.</p>
+        <p>&copy; 2025 Ruofei TANG. Last updated: December 2025.</p>
     </footer>
 </body>
 </html>
